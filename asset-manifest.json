@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/caculator/static/css/main.fd0a2a8c.chunk.css",
+    "main.js": "/caculator/static/js/main.c678c182.chunk.js",
+    "main.js.map": "/caculator/static/js/main.c678c182.chunk.js.map",
+    "runtime-main.js": "/caculator/static/js/runtime-main.5125c90e.js",
+    "runtime-main.js.map": "/caculator/static/js/runtime-main.5125c90e.js.map",
+    "static/css/2.a61f0ae8.chunk.css": "/caculator/static/css/2.a61f0ae8.chunk.css",
+    "static/js/2.ee988035.chunk.js": "/caculator/static/js/2.ee988035.chunk.js",
+    "static/js/2.ee988035.chunk.js.map": "/caculator/static/js/2.ee988035.chunk.js.map",
+    "static/js/3.29990997.chunk.js": "/caculator/static/js/3.29990997.chunk.js",
+    "static/js/3.29990997.chunk.js.map": "/caculator/static/js/3.29990997.chunk.js.map",
+    "index.html": "/caculator/index.html",
+    "static/css/2.a61f0ae8.chunk.css.map": "/caculator/static/css/2.a61f0ae8.chunk.css.map",
+    "static/css/main.fd0a2a8c.chunk.css.map": "/caculator/static/css/main.fd0a2a8c.chunk.css.map",
+    "static/js/2.ee988035.chunk.js.LICENSE.txt": "/caculator/static/js/2.ee988035.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/caculator/static/media/nen2.cb3fcafe.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5125c90e.js",
+    "static/css/2.a61f0ae8.chunk.css",
+    "static/js/2.ee988035.chunk.js",
+    "static/css/main.fd0a2a8c.chunk.css",
+    "static/js/main.c678c182.chunk.js"
+  ]
+}
