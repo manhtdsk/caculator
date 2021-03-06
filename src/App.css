@@ -1,0 +1,141 @@
+@import '~antd/dist/antd.css';
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+html[data-theme="dark"] {
+  --color: rgb(250, 250, 250);
+  --background-color: rgb(5, 5, 5);
+  --btn-active: #424548;
+}
+
+html[data-theme="light"] {
+  --color: rgb(5, 5, 5);
+  --background-color: rgb(250, 250, 250);
+  --btn-active: #bcbfc2;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.Caculator {
+  background-image: url(./nen2.jpg);
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  background-size: cover;
+  /* background-color: red; */
+}
+
+.display-caculator {
+  /* background-color: red; */
+  display: inline-block;
+  width: 450px;
+  height: 70vh;
+  /* border: 0.5px solid rgb(180, 165, 165); */
+  margin: 10vh;
+}
+
+.display-result {
+  border: 0.5px solid rgb(180, 165, 165);
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+  padding: 13px;
+  height: 115px;
+  overflow-x: auto;
+  font-size: 50px;
+  background-color: var(--background-color);
+  color: var(--color);
+  /* border: 2px solid red; */
+  margin-bottom: -6px;
+  overflow-x:visible;
+  overflow-y:hidden;
+}
+
+/* .main {
+  display: inline-block;
+  font-weight: bold;
+  height: 80%;
+  width: 100%;
+  border-top: 0.5px solid rgb(180, 165, 165);
+  border: 2px solid red;
+} */
+
+/* .nutnhan {
+  display: inline-block;
+  font-weight: bold;
+  display: grid;
+  height: 100%;
+  grid-template-columns: 2fr 1.5fr;
+} */
+
+.main {
+  /* display: inline-block; */
+  /* border: 2px solid red; */
+  width: 100%;
+  height: 80%;
+  display: grid;
+}
+
+.nutnhan {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr;
+  border-left: 0.5px solid rgb(180, 165, 165);
+  border-bottom: 0.5px solid rgb(180, 165, 165);
+  border-right: 0.5px solid rgb(180, 165, 165);
+}
+
+.number {
+  background-color: var(--background-color);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 25% 25% 25% 25%;
+  border-right: 0.5px solid rgb(180, 165, 165);
+}
+
+.tinh {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--background-color);
+}
+
+.number button {
+  outline: none;
+  border: none;
+  font-size: 30px;
+  background-color: var(--background-color);
+  color: var(--color);
+}
+
+.tinh button {
+  outline: none;
+  border: none;
+  font-size: 40px;
+  color: #1a73e0;
+  background-color: var(--background-color);
+}
+
+button:active {
+  background: var(--btn-active);
+  border-radius: 50%;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  color: #666666;
+  border-radius: 30%;
+}
+
+input[type="checkbox"] {
+  display: none;
+  /* background-color: #ff0000; */
+}
+
+.modee {
+  /* border: 1px solid red; */
+  float: right;
+}
