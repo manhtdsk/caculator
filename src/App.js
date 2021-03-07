@@ -19,7 +19,7 @@ const DarkModeToggle = () => {
       setCheck(true)
     }
     if (localStorage.getItem("theme") === 'dark') setCheck(false)
-  },[]);
+  }, []);
 
   //set theme = light lần đầu tiên render
   useEffect(() => {
@@ -28,12 +28,12 @@ const DarkModeToggle = () => {
       document
         .getElementsByTagName("HTML")[0]
         .setAttribute("data-theme", "light");
-      
+
       if (localStorage.getItem("theme") === 'light') setCheck(true)
 
       if (localStorage.getItem("theme") === 'dark') setCheck(false)
     }
-  },[])
+  }, [])
 
   //hàm đổi giá trị theme dark light
   const toggleThemeChange = () => {
