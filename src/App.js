@@ -7,40 +7,57 @@ import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 
 const DarkModeToggle = () => {
+  const [isDark, setIsDark] = useState(localStorage.getItem("theme"));
+  const [check, setCheck] = useState();
 
-  const [isDark, setIsDark] = useState(localStorage.getItem("theme") === "dark");
-
+  //set theme từ lần 2 trở đi bằng biến lưu trong localStorage
   useEffect(() => {
     document
       .getElementsByTagName("HTML")[0]
       .setAttribute("data-theme", localStorage.getItem("theme"));
-  }, []);
+    if (localStorage.getItem("theme") === 'light') {
+      setCheck(true)
+    }
+    if (localStorage.getItem("theme") === 'dark') setCheck(false)
+  },[]);
 
+  //set theme = light lần đầu tiên render
+  useEffect(() => {
+    if (typeof localStorage.getItem("theme") == "object") {
+      localStorage.setItem("theme", "light");
+      document
+        .getElementsByTagName("HTML")[0]
+        .setAttribute("data-theme", "light");
+      
+      if (localStorage.getItem("theme") === 'light') setCheck(true)
+
+      if (localStorage.getItem("theme") === 'dark') setCheck(false)
+    }
+  },[])
+
+  //hàm đổi giá trị theme dark light
   const toggleThemeChange = () => {
+    setCheck(!check)
     if (isDark === 'dark') {
       localStorage.setItem("theme", "light");
       document
         .getElementsByTagName("HTML")[0]
         .setAttribute("data-theme", "light");
       setIsDark(localStorage.getItem("theme"));
+
     } else {
       localStorage.setItem("theme", "dark");
       document
         .getElementsByTagName("HTML")[0]
         .setAttribute("data-theme", "dark");
       setIsDark(localStorage.getItem("theme"));
+
     }
   }
 
   return (
     <label>
-      <input
-        type="checkbox"
-        defaultChecked={isDark}
-        onChange={() => toggleThemeChange()}
-      />
-
-      <Switch checkedChildren='Light' unCheckedChildren='Dark' defaultChecked onChange={() => toggleThemeChange()} />
+      <Switch checkedChildren="Dark" unCheckedChildren='Light' checked={check} onClick={() => toggleThemeChange()} />
     </label>
 
   )
@@ -53,7 +70,6 @@ function App() {
   const [ketqua, setKetqua] = useState('')
   const [tf, setTF] = useState(false)
 
-
   const tinhketqua = () => {
     if (ketqua !== '') {
       setKetqua(eval(ketqua))
@@ -64,15 +80,13 @@ function App() {
   const ac = () => {
     setKetqua('')
     setTF(false)
-
   }
 
   const del = () => {
     const del2 = ketqua
     setKetqua(del2.substring(0, del2.length - 1))
-
   }
-  useEffect(() => console.log(ketqua))
+  // useEffect(() => console.log(ketqua))
 
   return (
     <div className="Caculator">
