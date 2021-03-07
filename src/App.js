@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import './App.css';
 import { Switch } from 'antd';
 import 'antd/dist/antd.css';
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 
 
@@ -115,6 +116,10 @@ function App() {
         </div>
 
       </div>
+      <MessengerCustomerChat
+        pageId="108457081295779"
+        appId="742330696473947"
+      />
     </div>
   );
 }
